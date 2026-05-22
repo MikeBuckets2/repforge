@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: repforge-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: repforge
+      POSTGRES_PASSWORD: repforge
+      POSTGRES_DB: repforge
+    ports:
+      - "5432:5432"
+    volumes:
+      - repforge-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U repforge -d repforge"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  repforge-postgres-data:
