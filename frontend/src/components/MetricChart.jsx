@@ -13,8 +13,8 @@ import {
 export function VolumeAreaChart({ data }) {
   return (
     <div className="chart-frame">
-      <ResponsiveContainer width="100%" height={260}>
-        <AreaChart data={data}>
+      <ResponsiveContainer width="100%" height={260} style={{ overflow: 'visible' }}>
+        <AreaChart data={data} margin={{ left: 0, right: 12, top: 0, bottom: 0 }}>
           <defs>
             <linearGradient id="volume" x1="0" x2="0" y1="0" y2="1">
               <stop offset="5%" stopColor="#2a9d8f" stopOpacity={0.35} />
@@ -35,8 +35,8 @@ export function VolumeAreaChart({ data }) {
 export function SessionBarChart({ data }) {
   return (
     <div className="chart-frame compact">
-      <ResponsiveContainer width="100%" height={220}>
-        <BarChart data={data}>
+      <ResponsiveContainer width="100%" height={220} style={{ overflow: 'visible' }}>
+        <BarChart data={data} margin={{ left: 0, right: 12, top: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#dce2da" />
           <XAxis dataKey="label" tickLine={false} axisLine={false} />
           <YAxis tickLine={false} axisLine={false} width={32} />

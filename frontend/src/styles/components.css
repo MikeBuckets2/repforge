@@ -186,10 +186,18 @@
 .chart-frame {
   width: 100%;
   min-height: 260px;
+  /* Allow axis labels to render outside the SVG bounds when necessary */
+  overflow: visible;
 }
 
 .chart-frame.compact {
   min-height: 220px;
+  overflow: visible;
+}
+
+/* Ensure SVG inside chart-frame can show overflowing labels */
+.chart-frame svg {
+  overflow: visible;
 }
 
 .progress-block {
