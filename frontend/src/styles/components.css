@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-width: max-content;
+  min-width: 0;
   border: 0;
   border-radius: var(--radius-sm);
   font-weight: 800;
