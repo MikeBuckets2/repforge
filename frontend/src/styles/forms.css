@@ -237,3 +237,11 @@ textarea:focus {
     z-index: 1;
   }
 }
+
+/* Mobile: ensure signup content sits below fixed navbar */
+@media (max-width: 680px) {
+  .auth-page {
+    /* existing padding + space for fixed navbar (brand + nav) */
+    padding-top: 72px;
+  }
+}
