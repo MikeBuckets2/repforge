@@ -330,3 +330,34 @@
     text-overflow: ellipsis;
   }
 }
+
+.mobile-actions {
+  display: none;
+}
+.mobile-logout {
+  display: none;
+}
+
+/* Smooth scrolling for horizontal nav */
+.side-nav {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile visibility and nav tweaks */
+@media (max-width: 1040px) {
+  .mobile-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+  }
+  .mobile-logout {
+    display: inline-flex;
+  }
+  .side-nav {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .side-nav::-webkit-scrollbar {
+    display: none;
+  }
+}

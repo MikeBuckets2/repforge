@@ -44,7 +44,7 @@ export default function AppShell() {
 
         <nav className="side-nav" aria-label="Application">
           {navItems.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.end} className="nav-item">
+            <NavLink key={item.to} to={item.to} end={item.end} className="nav-item" aria-label={item.label}>
               <item.icon size={18} />
               <span>{item.label}</span>
             </NavLink>
@@ -56,13 +56,18 @@ export default function AppShell() {
             <strong>{user?.name}</strong>
             <span>{user?.experienceLevel?.toLowerCase()}</span>
           </div>
-          <Button variant="ghost" size="sm" icon={LogOut} onClick={handleLogout}>
+          <Button variant="ghost" size="sm" icon={LogOut} onClick={handleLogout} aria-label="Log out">
             Log out
           </Button>
         </div>
       </aside>
 
       <main className="app-main">
+        <div className="mobile-actions" role="toolbar" aria-label="Mobile actions">
+          <Button variant="ghost" size="sm" icon={LogOut} onClick={handleLogout} className="mobile-logout" aria-label="Log out">
+            Log out
+          </Button>
+        </div>
         <Outlet />
       </main>
     </div>
