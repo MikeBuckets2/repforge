@@ -87,6 +87,15 @@
   margin-bottom: 18px;
 }
 
+.panel-heading > * {
+  min-width: 0;
+}
+
+.preview-header > *,
+.preview-row > * {
+  min-width: 0;
+}
+
 .panel-heading > div {
   display: grid;
   gap: 5px;

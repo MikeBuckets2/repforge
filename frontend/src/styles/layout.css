@@ -84,7 +84,6 @@
 .app-main {
   width: 100%;
   padding: 34px;
-  overflow: hidden;
 }
 
 .page-stack {
@@ -100,6 +99,23 @@
   justify-content: space-between;
   gap: 24px;
   padding: 4px 0 8px;
+}
+
+.page-header > * {
+  min-width: 0;
+}
+
+.page-actions > * {
+  min-width: 0;
+}
+
+/* Ensure long words wrap and flex children can shrink on small screens */
+.page-header p,
+.panel p,
+.brand-mark span,
+.nav-item span {
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .page-header div:first-child {
