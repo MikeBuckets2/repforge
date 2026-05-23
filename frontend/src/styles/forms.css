@@ -228,3 +228,12 @@ textarea:focus {
     display: none;
   }
 }
+
+@media (max-width: 520px) {
+  .two-column label input[type="date"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 6px;
+    z-index: 1;
+  }
+}
