@@ -336,8 +336,13 @@
     width: calc(100% - 20px);
   }
 
-  .marketing-nav .text-link {
+  .marketing-nav .text-link:not(.auth-link) {
     display: none;
+  }
+  .marketing-nav .auth-link {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 8px;
   }
 
   .brand-mark span:last-child {

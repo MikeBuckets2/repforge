@@ -40,7 +40,7 @@ export default function LandingPage() {
             </Button>
           ) : (
             <>
-              <Link className="text-link" to="/login">
+              <Link className="text-link auth-link" to="/login">
                 Log in
               </Link>
               <Link className="btn btn-primary btn-md" to="/signup">
